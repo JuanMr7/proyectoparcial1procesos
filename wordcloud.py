@@ -8,14 +8,14 @@ from io import BytesIO
 from time import sleep, time 
 
 while True: 
-
-   while True:
-      id = input("[*] Digite el ID del usuario para mostrar la nube de palabras: ")
+   
+    while True:
+         id = input("[*] Digite el ID del usuario para mostrar la nube de palabras: ")
       
-      if id.isdigit () != True:
-         print ("\n\nDato no valido.")
-      else:
-         break
+         if id.isdigit () != True:
+            print ("\n\nDato no valido.")
+         else:
+               break
             
     url = 'https://es.stackoverflow.com/users/' + id + "/?tab=tags"
     page = requests.get (url)   # requests revisa si el url es funcional
@@ -54,9 +54,9 @@ while True:
 
     else:
         print("Este usuario no posee tags que mostrar")
-
-        msj = input("\nDesea acabar la ejecución si/no: ")
-        msj.lower() #En caso de que escriba en mayuscula esta la transformara en minuscula
+         
+    msj = input("\nDesea acabar la ejecución si/no: ")
+    msj.lower() #En caso de que escriba en mayuscula esta la transformara en minuscula
 
     if msj == "si":
         break
