@@ -8,18 +8,19 @@ from io import BytesIO
 from time import sleep, time 
 
 while True: 
- while True:
 
-    id = input("[*] Digite el ID del usuario para mostrar la nube de palabras: ")
+   while True:
+
+         id = input("[*] Digite el ID del usuario para mostrar la nube de palabras: ")
     
     
-    if id.isdigit () != True:
-        print ("\n\nDato no valido.")
-    else:
-     break
+         if id.isdigit () != True:
+             print ("\n\nDato no valido.")
+         else:
+         break
      
-        url = 'https://es.stackoverflow.com/users/' + id + "/?tab=tags"
-        page = requests.get (url)   # requests revisa si el url es funcional
+      url = 'https://es.stackoverflow.com/users/' + id + "/?tab=tags"
+      page = requests.get (url)   # requests revisa si el url es funcional
 
 
       soup = BeautifulSoup (page.content, "html.parser") # BeautifulSoup analiza el htlm
