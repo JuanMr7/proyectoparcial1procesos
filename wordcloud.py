@@ -5,7 +5,6 @@ from PIL import Image
 from wordcloud import WordCloud, ImageColorGenerator, STOPWORDS
 import requests
 from io import BytesIO
-import requests
 from time import sleep 
 
  
@@ -58,10 +57,10 @@ while True:
     else:
         print("Este usuario no posee tags que mostrar")
 
-    msj = input("\nDesea acabar la ejecución y/n: ")
+    msj = input("\nDesea acabar la ejecución si/no: ")
     msj.lower() #En caso de que escriba en mayuscula esta la transformara en minuscula
 
-    if msj == "y":
+    if msj == "si":
         break
         print("\n")
 
